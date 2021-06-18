@@ -1,0 +1,29 @@
+.banner{
+    width: 100%;
+    height: 133px;
+    float: left;
+    align-items: center;
+    text-align-last: start;}
+
+.post{
+    height: 100px;
+    width: 131px;
+    margin-left: 40px;
+    float: left;}
+.image{
+    width: 105px;
+    height: 105px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 14px;
+    padding-left: 13px;
+    padding-right: 18px;
+
+}
+.p{
+    height: 15px;
+    width: 139px;
+    margin-left: 64px;
+    float: left;
+    text-align: center;
+}

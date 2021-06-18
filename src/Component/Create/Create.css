@@ -1,0 +1,48 @@
+.centerDiv {
+  margin-top: 163px;
+  border: 1px solid #0e02f181;
+  color: white;
+  width: auto;
+  padding: 50px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  background-color: #0037e899;
+}
+  .input {
+    margin-top: 10px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    outline-color: transparent;
+  }
+  .index {
+    
+    border-radius: 11px;
+    margin-top: 16px;
+    width: 100%;
+    height: 89px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    outline-color: transparent;
+    
+  }
+  
+  .uploadBtn {
+    margin-top: 30px;
+    width: 100%;
+    height: 48px;
+    
+    background-color: #fd7200ef;
+    color: whitesmoke;
+    font-weight: 900;
+  }
+  .uploadBtn:hover {
+    background-color: white;
+    color: #099bfc;
+    border: 2px solid #1100f8;
+  }
+  

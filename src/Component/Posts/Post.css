@@ -1,0 +1,49 @@
+.post-layer{
+    display: flex;
+    background-color: #f5f4f3;
+    height: 288px;
+    width: 100%;
+    float: left;
+    margin: 74px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 80px;}
+.post2{
+    background-color: white;
+    height: 270px;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: auto;
+    margin-top: 10px;
+    float: left;
+}
+.postimg{
+    padding-top: 20px;
+    align-content: center;
+}
+.postingclass{
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+.category {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+   
+}
+.price{
+        text-align: center;
+        font-weight: 600;
+        color: #87e687;
+    }
+    
+
+
+.content
+{font-size: 14px;
+    text-align: center;
+    padding-top: 20px;
+    color: #0000007a;
+    
+}
