@@ -1,13 +1,42 @@
-import React from 'react'
+import React,{useContext,useState} from 'react'
 import './Signin.css'
 
+import {FirebaseContext} from '../../store/Context'
+import {useHistory} from 'react-router-dom';
+
 function Signin() {
+
+  const history=useHistory()
+
+  const [username,setUsername]=useState('');
+  const [email,setEmail]  =useState('');
+  const [phone,setPhone]  =useState('');
+  const [password,setPassword]=useState('');
+
+
+const {firebase}=useContext(FirebaseContext)
+
+
+const handleSubmit=(e)=>{ 
+  e.preventDefault() 
+firebase.auth().createUserWithEmailAndPassword(email,password).then((result)=>{
+  result.user.updateProfile({displayName:username}).then(()=>{
+    firebase.firestore().collection('users').add({
+      id:result.user.uid,
+      username:username,
+      phone:phone
+    }).then(()=>{history.push('/login')}) 
+    
+  })  
+  }) 
+}
+
     return (
         <div>
             
           <div className="signupParentDiv">
             <img className='signupimg' width="200px" height="200px" src='https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png'></img>
-            <form>
+            <form onSubmit={handleSubmit} >
               <label htmlFor="fname">Username</label>
               <br />
               <input
@@ -15,7 +44,9 @@ function Signin() {
                 type="text"
                 id="fname"
                 name="name"
-                defaultValue="John"
+                defaultValue="Doe"
+                value={username}
+                onChange={(e)=>setUsername(e.target.value)}
               />
               <br />
               <label htmlFor="fname">Email</label>
@@ -25,7 +56,9 @@ function Signin() {
                 type="email"
                 id="fname"
                 name="email"
-                defaultValue="John"
+                defaultValue="@gmail.com"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
               />
               <br />
               <label htmlFor="lname">Phone</label>
@@ -35,7 +68,10 @@ function Signin() {
                 type="number"
                 id="lname"
                 name="phone"
-                defaultValue="Doe"
+                defaultValue="966.."
+                value={phone}
+                onChange={(e)=>setPhone(e.target.value)}
+              
               />
               <br />
               <label htmlFor="lname">Password</label>
@@ -46,10 +82,12 @@ function Signin() {
                 id="lname"
                 name="password"
                 defaultValue="Doe"
+                value={password}
+                onChange={(e)=>setPassword(e.target.value)}
               />
               <br />
               <br />
-              <button>Signup</button>
+              <button>SignIn</button>
             </form>
             <a>Login</a>
           </div>

@@ -2,10 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import firebase from './firebase/Config'
+import Context from './store/Context'
+import {FirebaseContext} from './store/Context'
+import Post from './store/PostContext'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <FirebaseContext.Provider value={{firebase}}>
+    <Context>
+    <Post>
     <App />
-  </React.StrictMode>,
+    </Post>
+    </Context>
+    </FirebaseContext.Provider>,
   document.getElementById('root')
 );

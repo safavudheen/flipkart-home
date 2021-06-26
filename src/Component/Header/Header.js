@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Header.css'
+import {FirebaseContext,AuthContext} from '../../store/Context'
+import {useHistory} from 'react-router-dom'
+
 function Header() {
+    const history = useHistory()
+    const {firebase}= useContext(FirebaseContext)
+    const {user}  = useContext(AuthContext)
+
     return (
         <div>
             <div className="header">
@@ -18,7 +25,8 @@ function Header() {
   
                 </div>
                 <div className='btn'>
-                <button className='login'> Login</button>
+                { user ? '':<button className='login' onClick={()=>history.push('/login')}
+                > Login</button>}
                 </div>
                 <div className='more' >
                     <h4>More</h4>
@@ -28,6 +36,13 @@ function Header() {
                     <h4>Cart</h4>
 
                 </div>
+               {user && <p className='logout' onClick={()=>{
+                    firebase.auth().signOut();
+                    history.push('/login')}}
+               > Logout </p>}
+               <p className="add" onClick={()=>{
+                   history.push('/create')
+               }}>add</p>
 
             </div>
         </div>

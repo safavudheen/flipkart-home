@@ -1,7 +1,23 @@
 import React from 'react'
 import './Login.css'
+import { FirebaseContext } from '../../store/Context';
+import {useContext,useState} from 'react'
+import {useHistory} from 'react-router-dom'
 
 function Login() {
+
+const [email,setEmail]=useState('');
+const [password,setPassword]=useState('');
+
+const {firebase}=useContext(FirebaseContext);
+
+const history =useHistory()
+
+const handleLogin=(e)=>{
+  e.preventDefault()
+  firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
+    history.push('/')
+  })}
     return (
         <div className="background">
           <div className="loginParentDiv">
@@ -18,7 +34,7 @@ function Login() {
                   <div></div>
             <img className='imglogin' width="200px" height="200px" src='https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_c4a81e.png'></img>
             </div>
-            <form className='formclass'>
+            <form onSubmit={handleLogin} className='formclass' >
               <label htmlFor="fname" >Enter Email/Mobile Number</label>
               <br />
               <input
@@ -27,6 +43,8 @@ function Login() {
                 id="fname"
                 name="email"
                 defaultValue="John"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
               />
               <br />
               <label htmlFor="lname">Password</label>
@@ -37,6 +55,8 @@ function Login() {
                 id="lname"
                 name="password"
                 defaultValue="Doe"
+                value={password}
+                onChange={(e)=>setPassword(e.target.value)}
               />
               <br />
               <br />

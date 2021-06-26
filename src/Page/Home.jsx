@@ -4,7 +4,7 @@ import Banner from '../Component/Banner/Banner'
 import Banner2 from '../Component/Banner2/Banner2'
 import Post from '../Component/Posts/Post'
 import Footer from '../Component/Footer/Footer'
-import Offer from '../Component/offerbar/Offer'
+import Offer from '../Component/Offerbar/Offer'
 import Post2 from '../Component/Post2/Post2'
 
 
