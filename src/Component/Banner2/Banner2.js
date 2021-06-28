@@ -6,7 +6,8 @@ function Banner2(){
     return (
         <div className='banner'>
             <div> 
-              <img className='imgb2' src='https://rukminim1.flixcart.com/flap/844/140/image/c0bfde792359dc2c.jpg?q=50'></img>
+              <img className='imgb2' src=	"https://rukminim1.flixcart.com/flap/1688/280/image/2bf503338031dd0f.jpg?q=50"></img>
+              
             
             </div>
     

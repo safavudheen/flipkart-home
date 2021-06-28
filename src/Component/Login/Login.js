@@ -61,7 +61,7 @@ const handleLogin=(e)=>{
               <br />
               <br />
               <button>Login</button>
-              <div className='signup-class'>
+              <div className='signup-class' onClick={(e)=>{history.push('/signin')}}>
               <a className="signup">Signup</a>
               </div>
             </form>

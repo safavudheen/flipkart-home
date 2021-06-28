@@ -6,6 +6,7 @@ import SignIn from './Page/SignIn'
 import ViewPost from './Page/ViewPost'
 import Create from './Page/Create'
 import Post from './store/PostContext'
+import {Button} from 'react-bootstrap'
 
 import {BrowserRouter as Router ,Route} from 'react-router-dom'
 import { AuthContext,FirebaseContext } from './store/Context'

@@ -6,7 +6,7 @@ import Post from '../Component/Posts/Post'
 import Footer from '../Component/Footer/Footer'
 import Offer from '../Component/Offerbar/Offer'
 import Post2 from '../Component/Post2/Post2'
-
+import { Button } from 'bootstrap' 
 
 
 
@@ -15,7 +15,7 @@ import Post2 from '../Component/Post2/Post2'
 function home() {
     return (
         <div>
-            <Header/>
+            <Header />
             <Banner/>
             <Banner2/>
             <Post/>
