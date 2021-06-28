@@ -9,7 +9,7 @@ function Post() {
     const [products,setProducts]=useState([])
 
     const {firebase} =useContext(FirebaseContext)
-    const history =useHistory
+    const history =useHistory()
 useEffect(()=>{firebase.firestore().collection('products').get().then((snapshot)=>{
     const allPost=snapshot.docs.map((product)=>
     {

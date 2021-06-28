@@ -1,14 +1,18 @@
 .banner{
+    overflow-x: hidden;
     margin-top: 45px;
     width: 100%;
-    height: 133px;
+    height: 123px;
     float: left;
     align-items: center;
-    text-align-last: start;}
+    text-align-last: start;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
 
 .post{
     height: 100px;
-    width: 13%;
+    width: 12%;
     margin-left: 16px;
     float: left;
 }
