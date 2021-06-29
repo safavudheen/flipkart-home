@@ -7,6 +7,7 @@ import {FirebaseContext} from './store/Context'
 import Post from './store/PostContext'
 import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
+
   <FirebaseContext.Provider value={{firebase}}>
     <Context>
     <Post>
