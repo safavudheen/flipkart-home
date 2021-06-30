@@ -10,6 +10,8 @@
     "bootstrap": "^4.6.0",
     "firebase": "^8.6.8",
     "floating-form-labels": "^1.2.4",
+    "gh": "^2.8.9",
+    "pages": "0.0.16",
     "popper.js": "^1.16.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
